@@ -297,3 +297,13 @@ DECLARE(필수) EVENT(필수) BEGIN(필수) CONTROL SQL EXCEPTION END(필수)
 
 3. 사용자 정의 함수 : INSERT,DELETE,UPDATE로 테이블 조작 불가, SELECT로 조회만 가능. 프로시저를 호출해 사용 못함.
 DECLARE(필수) BEGIN(필수) CONTROL SQL EXCEPTION RETURN(필수) END(필수)
+
+정적 SQL vs 동적
+1. SQL 구성 : 커서를 통한 정적 처리 VS 문자열(String) 변수에 담아 동적 처리
+2. 개발 패턴 : 커서의 범위 안에서 반복문을 활용해 SQL작성 VS NVL 함수를 사용할 필요없이 로직을 통해 SQL 작성
+3. 실행 속도 : 빠름 VS 느림
+4. 사전 검사 : 가능 VS 불가능 -> SQL 변형 위험
+
+ORM Object-Relational Mapping
+객체와 관계형데이터베이스의 데이터를 연결하는 기술
+ORM으로 생성된 가상의 객체지향 데이터베이스는 독립적이므로 재사용 및 유지보수 용이하고 직관적이고 간단하게 데이터 조작 가능
