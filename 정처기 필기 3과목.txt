@@ -289,3 +289,11 @@ DENSE_RANK() : WINDOW별로 순위를 반환하며 공동 순위를 무시하고
 프로그래밍 언어와 같이 연속적인 실행이나 분기, 반복 등의 제어가 가능한 SQL
 프로그래밍 언어에 비해 효율이 떨어지지만 연속적인 처리 가능, BEGIN ~ END 형식으로 작성되는 블록 구조로 기능별 모듈화 가능
 
+1. 프로시저 : 호출을 통해 실행되어 미리 저장해 놓은 SQL 작업 수행
+DECLARE(필수) BEGIN(필수) CONTROL SQL EXCEPTION TRANSACTION END(필수)
+
+2. 트리거 : DCL을 사용할 수 없으며 DCL이 포함된 프로시저나 함수를 호출하는 경우에도 오류 발생
+DECLARE(필수) EVENT(필수) BEGIN(필수) CONTROL SQL EXCEPTION END(필수)
+
+3. 사용자 정의 함수 : INSERT,DELETE,UPDATE로 테이블 조작 불가, SELECT로 조회만 가능. 프로시저를 호출해 사용 못함.
+DECLARE(필수) BEGIN(필수) CONTROL SQL EXCEPTION RETURN(필수) END(필수)
