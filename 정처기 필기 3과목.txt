@@ -253,3 +253,10 @@ C > D > U > R 순으로 우선순위 적용.
 
 임의 접근통제 DAC Discretionary Access Control : 데이터에 접근하는 사용자의 신원에 따라 접근 권한 부여 ex)접근통제 권한 = 주체
 강제 접근통제 MAC Mandatory Access Control : 주체와 객체의 등급을 비교해 접근 권한 부여 ex) 접근통제 권한 = 제3자
+
+SQL의 분류
+DDL Data Define Language: 도메인, 스키마, 테이블, 뷰, 인덱스를 정의하거나 변경 또는 삭제할 때 사용하는 언어
+ex) CREATE, ALTER, DROP
+
+DML Data Manipulation Language: 
+DCL Data Control Langauge:
