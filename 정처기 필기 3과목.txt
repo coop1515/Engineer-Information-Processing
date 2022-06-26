@@ -257,6 +257,30 @@ C > D > U > R 순으로 우선순위 적용.
 SQL의 분류
 DDL Data Define Language: 도메인, 스키마, 테이블, 뷰, 인덱스를 정의하거나 변경 또는 삭제할 때 사용하는 언어
 ex) CREATE, ALTER, DROP
+DML Data Manipulation Language: SELECT, INSERT, DELETE, UPDATE
+DCL Data Control Langauge: REVOKE, GRANT, ROLLBACK, COMMIT
 
-DML Data Manipulation Language: 
-DCL Data Control Langauge:
+윈도우 함수 : GROUP BY절을 이용하지 않고 속성의 값을 집계할 함수를 기술함.
+함수의 인수로 지정한 속성이 대상 레코드의 범위가 되는데, 이를 WINDOW라 함.
+ROW NUMBER() : WINDOW별로 각 레코드에 대한 일련 번호를 반환함 ex) 1,2,3,4,5
+RANK() : WINDOW별로 순위를 반환하며, 공동 순위를 반영함 ex) 1,1,1,4,5
+DENSE_RANK() : WINDOW별로 순위를 반환하며 공동 순위를 무시하고 순위를 부여함 ex) 1,1,1,2,3
+
+조인
+결합을 의미하며, 관계형 데이터베이스에서의 조인은 교집합 결과를 가지는 결합 방법을 의미.
+
+논리적 조인
+1. 내부 조인
+동등 조인 EQUI JOIN : 공통 존재 컬럼의 값이 같은 경우 추출
+자연 조인 NATURAL JOIN : 두 테이블의 모든 컬럼을 비교해 같은 컬럼 명을 가진 값이 같은 경우 추출
+교차 조인 CROSS JOIN : 조인 조건이 없는 모든 데이터 조합 추출
+
+2. 외부조인
+왼쪽 외부 조인 LEFT OUTER JOIN : 왼쪽 테이블의 모든 데이터와 오른쪽 동일 데이터 추출
+오른쪽 외부 조인 RIGHT OUTER JOIN : 오른쪽 테이블의 모든 데이터와 왼쪽 동일 데이터 추출
+완전 외부 조인 FULL OUTER JOIN : 양쪽의 모든 데이터 추출
+
+물리적 조인
+1. 중첩 반복 조인 Nested-Loop-JOIN : 2개 이상의 테이블에서 하나의 집합을 기준으로 순차적으로 상대방 ROW를 결합해 원하는 결과를 조합하는 방식
+2. 정렬 합병 조인 SORT-MERGE JOIN : 양쪽 테이블의 정렬한 결과를 차례로 검색하면서 연결고리 형태로 합병하는 방식
+3. 해시 조인 HASH JOIN : 해싱 함수 기법을 활용하여 조인을 수행하는 방식
