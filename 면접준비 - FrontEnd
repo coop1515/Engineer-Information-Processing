@@ -1,0 +1,12 @@
+React
+사용자 인터페이스를 만들기 위한 JS 라이브러리
+
+useState
+- useState는 state의 초기값을 정할 수 있고, return 값으로 state, setState를 돌려주는 hook이다.
+
+Redux
+- JS 상태관리 라이브러리이고 본질은 Node.js 모듈이다.
+- Store, Action, Reducer 가 관련이 있다.
+- Store라는 별도의 공간에서 필요한 상태를 담고 있다. 컴포넌트에서 상태 정보가 필요할 때 스토어에 접근한다.
+- Action을 Reducer에 전달하고 Reducer가 주문을 보고 Store에 상태를 업데이트 한다.
+- 
