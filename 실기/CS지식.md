@@ -314,9 +314,8 @@ JUnit : 자바 프로그래밍언어를 이용한 xUnit의 테스트 기법으�
 ```
 
 # V 다이어그램
-```
 <img src = "V Diagram.jpg">
-```
+
 # 보안 관련
 ```
 임시 키 무결성 프로토콜 TKIP  Temporal Key Integrity Protocol : IEEE 802.11 무선 네트워킹 표준에 사용되는 보안 프로토콜, IEEE 802.11i의 작업 그룹과 WiFi 얼라이언스에서 WEP를 하드웨어 교체 없이 대체하기 위해 고안.
